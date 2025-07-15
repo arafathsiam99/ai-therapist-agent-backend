@@ -1,16 +1,16 @@
 import { Request, Response } from "express";
+import { ChatSession, IChatSession } from "../models/ChatSession";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { v4 as uuidv4 } from "uuid";
 import { logger } from "../utils/logger";
-import { inngest } from "../inngest/index";
+import { inngest } from "../inngest";
 import { User } from "../models/User";
 import { InngestSessionResponse, InngestEvent } from "../types/inngest";
 import { Types } from "mongoose";
-import { ChatSession, IChatSession } from "../models/ChatSession";
 
 // Initialize Gemini API
 const genAI = new GoogleGenerativeAI(
-    process.env.GEMINI_API_KEY || "AIzaSyBCBz3wQu9Jjd_icCDZf-17CUO_O8IynwI"
+    process.env.GEMINI_API_KEY || "AIzaSyC5ooL3O-yWU0GkYr4g2IRHAn8swRkA0IM"
 );
 
 // Create a new chat session

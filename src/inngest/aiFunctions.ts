@@ -1,6 +1,6 @@
-import { inngest } from "./index";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { logger } from "../utils/logger";
+import { inngest } from ".";
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(
